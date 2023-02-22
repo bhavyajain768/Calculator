@@ -17,7 +17,7 @@ public class CalculatorControl {
 
     @PostMapping("/calculate")
     public String addForm(Calculator calculator,Model model){
-        model.addAttribute("Calculator",calculator);
+        model.addAttribute("Calculator",Calculator);
         return "result";
     }
 
