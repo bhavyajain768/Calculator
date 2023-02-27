@@ -1,0 +1,14 @@
+name: cicd-calculator
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: JDK Setup
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+      - name: Building package
+        run: mvn clean package
