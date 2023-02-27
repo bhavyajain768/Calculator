@@ -11,4 +11,5 @@ jobs:
         with:
           java-version: 17
       - name: Building package
-        run: mvn clean package
+        run: mvn clean install 
+             mvn clean package
